@@ -57,7 +57,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint src --fix",
-    "deploy": "rm -rf ./docs && npm run build && mv ./build ./docs && cp ./docs/index.html ./docs/404.html && git add ./docs && git commit -m ':rocket:' && git push origin master"
+    "deploy": "rm -rf ./docs && npm run build && mv ./build ./docs && cp ./docs/index.html ./docs/404.html"
   },
   "browserslist": {
     "production": [
