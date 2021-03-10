@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import transmuteLogo from "./logo.svg";
-import transmuteIdLogo from "./transmute-id-logo.svg";
+import transmuteIdLogo from "./transxmute-id-logo.svg";
 
 const withLogoStyles = withStyles(() => ({
   logo: {
@@ -18,7 +18,7 @@ const Logo = ({ classes, main }) => (
   <img
     src={main ? transmuteLogo : transmuteIdLogo}
     className={classes.logo}
-    alt="Transmute Logo"
+    alt="Wallet"
   />
 );
 

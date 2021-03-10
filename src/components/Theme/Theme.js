@@ -5,7 +5,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { darken, lighten } from '@material-ui/core/styles/colorManipulator';
 
-const primaryColor = '#594aa8';
+const primaryColor = '#161616';
 const secondaryColor = '#fcb373';
 const primaryColor2 = '#303f9f'
 

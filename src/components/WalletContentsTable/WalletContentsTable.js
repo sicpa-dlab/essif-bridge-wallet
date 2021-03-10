@@ -118,6 +118,9 @@ function WalletContentsTable(props) {
             detailPanel={rowData => {
                 let withoutMutation = { ...rowData };
                 delete withoutMutation.tableData;
+                if(withoutMutation.type === "VerifiablePresentation") {
+                    return;
+                }
                 return (
                     <CredentialDetailPanel verifiableCredential={withoutMutation} />
                 )

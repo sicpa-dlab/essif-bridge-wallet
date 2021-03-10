@@ -18,7 +18,9 @@ import Menu from '@material-ui/core/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
-const drawerWidth = 240;
+import TransmuteLogo from "./../Logo/logo-transmute.svg";
+
+const drawerWidth = 0;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -159,7 +161,7 @@ function ResponsiveDrawer(props) {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
@@ -167,7 +169,7 @@ function ResponsiveDrawer(props) {
             className={classes.menuButton}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           {props.headerImage ? (
             <img
               src={props.headerImage}
@@ -181,7 +183,7 @@ function ResponsiveDrawer(props) {
               </Typography>
             )}
           <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
+          {/* <div className={classes.sectionDesktop}>
             {props.rightHandAccountMenu.map(menuItem => {
               if (menuItem.displaySmUp) {
                 return (
@@ -212,8 +214,8 @@ function ResponsiveDrawer(props) {
             >
               <AccountCircleIcon />
             </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
+          </div> */}
+          {/* <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
               aria-controls={'primary-search-account-menu-mobile'}
@@ -223,43 +225,12 @@ function ResponsiveDrawer(props) {
             >
               <MoreIcon />
             </IconButton>
-          </div>
+          </div> */}
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+      {/* {renderMobileMenu}
+      {renderMenu} */}
 
-      <nav className={classes.drawer} aria-label="drawer menu">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation="css">
-          <Drawer
-            container={container}
-            variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            {props.drawer}
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation="css">
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            open
-          >
-            {props.drawer}
-          </Drawer>
-        </Hidden>
-      </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <div style={{ maxWidth: '100%' }}>{props.content}</div>

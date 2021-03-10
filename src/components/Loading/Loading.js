@@ -15,7 +15,7 @@ function Loading({ message }) {
       }}
     >
       <img
-        alt="transmute loading..."
+        alt="loading..."
         src={loadingGif}
         style={{
           filter: "brightness(25%) sepia(1) hue-rotate(-150deg)",
